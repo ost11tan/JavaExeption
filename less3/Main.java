@@ -56,7 +56,7 @@ public class Main {
         try {
             phoneNumber = Long.parseLong(data[4]);
         } catch (NumberFormatException e) {
-            System.out.println("Ошибка! Неверный формат номера телефона");
+            System.out.println("Неверный формат номера телефона, введите только цифры! ");
             return;
         }
 
@@ -64,12 +64,12 @@ public class Main {
         try {
             birthDate = LocalDate.parse(data[3], DateTimeFormatter.ofPattern("dd.MM.yyyy"));
         } catch (DateTimeParseException e) {
-            System.out.println("Ошибка! Неверный формат даты рождения");
+            System.out.println("Неверный формат даты рождения! Введите в формате dd.mm.yyyy");
             return;
         }
 
         if (!gender.equals("m") && !gender.equals("f")) {
-            System.out.println("Ошибка! Неверный формат пола");
+            System.out.println("Неверный формат пола! Введите f или m");
             return;
         }
 
