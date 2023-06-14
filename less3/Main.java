@@ -125,6 +125,6 @@ public class Main {
         private static String formatDate(LocalDate dateOfBirth) {
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
             return dateOfBirth.format(formatter);
-        }
+        } 
     }
 }
